@@ -1,7 +1,6 @@
 package com;
 
 import cn.hutool.core.date.DateUtil;
-import com.mysql.jdbc.StringUtils;
 import org.apache.log4j.Logger;
 import org.mybatis.generator.exception.InvalidConfigurationException;
 import org.mybatis.generator.exception.XMLParserException;
@@ -9,20 +8,12 @@ import org.mybatis.generator.exception.XMLParserException;
 import javax.swing.*;
 import javax.swing.filechooser.FileFilter;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.ComponentAdapter;
-import java.awt.event.ComponentEvent;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.awt.event.WindowEvent;
+import java.awt.event.*;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.Map;
 import java.util.Properties;
 
 
@@ -293,25 +284,6 @@ public class MsgLoadFrame extends JFrame implements ActionListener {
                 resetSize();
             }
         });
-
-//        panel.addMouseMotionListener(new MouseAdapter() {
-//             @Override
-//             public void mouseMoved(MouseEvent e) {
-//
-//
-//
-//             };
-//        });
-//
-//
-//        panel.addComponentListener(new ComponentAdapter() {//拖动窗口监听
-//            @Override
-//            public void componentResized(ComponentEvent e) {
-//                int whidth=mainframe.getWidth();//获取窗口宽度
-//                int height=mainframe.getHeight();//获取窗口高度  你也可以设置高度居中
-//            }
-//
-//        });
     }
 
     /**
@@ -440,15 +412,6 @@ public class MsgLoadFrame extends JFrame implements ActionListener {
                     e.printStackTrace();
                     outtext_textarea.append(e+"\n");
                 }
-//                result = JOptionPane.showConfirmDialog(null, "是否打开日志文件?", "确认", 0);//YES_NO_OPTION
-//                if (result == 0) {//是：0，否：1，取消：2
-//                    try {
-//                        @SuppressWarnings("unused")
-//                        Process process = Runtime.getRuntime().exec("cmd.exe  /c notepad "+outlogpath+"\\log.log");//调用cmd方法使用记事本打开文件
-//                    } catch (IOException e) {
-//                        e.printStackTrace();
-//                    }
-//                }
             }
         }else{
             //判断三个选择按钮并对应操作
